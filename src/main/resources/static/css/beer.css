@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.container > * {
+    grid-column: 1 / span 12;
+}
+
+.boxes, .description {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.beerName{
+    grid-column: 3 / span 8;
+    text-align: center;
+}
+
+.headlines {
+    grid-column: 1 / span 4;
+}
+
+.inputText {
+    grid-column: 5 / span 7;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+}
+
+@media(min-width: 600px){
+
+    .beerName{
+        font-size: x-large;
+    }
+
+    .headlines{
+        grid-column: 5;
+        font-size: large;
+    }
+    .inputText{
+        grid-column: 6 / span 3;
+        font-size: large;
+    }
+    img {
+        display: grid;
+        grid-column: 5 / span 4;
+        margin: auto;
+    }
+    .descHeadline{
+        grid-column: 5;
+    }
+    .descText{
+        grid-column: 6 / span 4;
+    }
+}

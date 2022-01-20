@@ -1,0 +1,43 @@
+.mainFooter {
+        background-color: #4C3F91;
+        color: white;
+        padding-top: 8px;
+        padding-bottom: 8px;
+}
+
+.address, .phone, .email, .company {
+    text-align: center;
+}
+
+
+@media(min-width: 600px) {
+
+    .mainFooter{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .address {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .phone {
+        grid-column: 4 / span 2;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .email {
+        grid-column: 8 / span 2;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .company {
+        grid-column: 11 / span 2;
+        grid-row: 2;
+        text-align: center;
+    }
+}

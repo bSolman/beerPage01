@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>What'a'Beer</title>
+    <link href="/css/links.css" type="text/css" rel="stylesheet">
+    <link href="/css/header.css" type="text/css" rel="stylesheet">
+    <link href="/css/beer.css" type="text/css" rel="stylesheet">
+    <link href="/css/footer.css" type="text/css" rel="stylesheet">
+    <script src="/js/sidebar.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<div th:replace="fragments/header :: header"></div>
+<div class="container">
+    <div class="boxes">
+        <h3 class="beerName" th:text="${beers.name}"></h3>
+        <img th:src="${beers.path}">
+    </div>
+    <div class="boxes">
+        <h5 class="headlines">Nationalitet: </h5>
+        <h5 class="inputText" th:text="${beers.country}"></h5>
+    </div>
+    <div class="boxes">
+        <h5 class="headlines">Vilken öityp: </h5>
+        <h5 class="inputText" th:text="${beers.type}"></h5>
+    </div>
+    <div class="description">
+        <h3 class="descHeadline">Om bärsen:</h3>
+        <p class="descText" th:text="${beers.description}"></p>
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer">
+</div>
+
+</body>
+</html>

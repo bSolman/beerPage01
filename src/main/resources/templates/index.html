@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>What'a'Beer</title>
+    <link href="/css/links.css" type="text/css" rel="stylesheet">
+    <link href="/css/header.css" type="text/css" rel="stylesheet">
+    <link href="/css/index.css" type="text/css" rel="stylesheet">
+    <link href="/css/footer.css" type="text/css" rel="stylesheet">
+    <script src="/js/sidebar.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<div class="divHeader" th:replace="fragments/header :: header"></div>
+<div class="container">
+    <div class="container2">
+        <div class="boxes" th:each="indexes: ${index}">
+            <img th:src="${indexes.path}">
+            <a class="links" th:href="@{/web/oneBeer(id=${indexes.id})}">[[${indexes.name}]]</a>
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/footer :: footer">
+    <p>footer</p>
+</footer>
+</body>
+</html>
